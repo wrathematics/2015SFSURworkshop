@@ -1,0 +1,24 @@
+---
+title: "Introduction to R"
+author: "Drew Schmidt"
+date: "April 2, 2015"
+output:
+  ioslides_presentation:
+    highlight: zenburn
+    logo: pics/utk.png
+    transition: faster
+    smaller: no
+    widescreen: yes
+    css: style.css
+---
+
+## Contents
+
+
+
+
+## Questions?
+
+This presentation is available at [github.com/wrathematics/2015SFSURworkshop](https://github.com/wrathematics/2015SFSURworkshop)
+
+Exercises are also available there.
