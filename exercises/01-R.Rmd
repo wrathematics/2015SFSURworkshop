@@ -1,0 +1,52 @@
+---
+title: 'TODO'
+author: "Drew Schmidt"
+date: "04/2/2015"
+output: html_document
+---
+
+
+
+1. Install R from http://cran.r-project.org/
+
+
+2. Install RStudio from http://www.rstudio.com/
+
+
+3. Experiment with R Commander.  Install it via `install.packages("Rcmdr")`.  Load it with
+
+```r
+library(Rcmdr)
+```
+
+
+4. Experiment with rattle.  Install it via `install.packages("rattle")`.  Load it with
+
+```r
+library(rattle)
+rattle()
+```
+
+
+5. Try your best to install Deducer via `install.packages("Deducer")`.  Load it by first starting JGR:
+
+```r
+library(JGR)
+JGR()
+```
+
+Then from JGR, run
+
+```r
+library(Deducer)
+```
+
+
+6.  Experiment with the Shiny webapp [Plot Your Data](https://pharmacometrics.shinyapps.io/ggplotmydata/ggplotwithyourdata.Rmd).  If you need some data, try the iris dataset, which you can get by starting R and entering:
+
+```{r, echo=TRUE, eval=FALSE}
+write.csv(iris, file="iris.csv")
+```
+
+
+7.  Experiment with the Shiny webapp [Radiant](http://vnijs.rady.ucsd.edu:3838/marketing) [Source code](https://github.com/vnijs/radiant).
