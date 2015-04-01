@@ -7,4 +7,9 @@ output: html_document
 
 
 
-1. 
+1. Install shiny.
+
+2. Look through the shiny gallery http://shiny.rstudio.com/gallery/  Find
+an example that interests you and read through its source code.
+
+3. Take the official shiny tutorial http://shiny.rstudio.com/tutorial/
