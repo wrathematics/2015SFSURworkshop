@@ -2,8 +2,8 @@ library(shiny)
 library(maps)
 library(mapproj)
 
-source("./examples/percent_map.r")
-counties <- readRDS("./examples/counties.rds")
+source("./shiny_examples/percent_map.r")
+counties <- readRDS("./shiny_examples/counties.rds")
 
 
 ### ui
