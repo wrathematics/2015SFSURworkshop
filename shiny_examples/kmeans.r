@@ -2,7 +2,7 @@ library(shiny)
 
 dataset <- iris
 
-ui <- fluidPage(responsive = FALSE,
+ui <- fluidPage(
   fluidRow(
     column(4, selectInput('xcol', 'X Variable', names(dataset))),
     column(4, selectInput('ycol', 'Y Variable', names(dataset),

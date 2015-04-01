@@ -224,7 +224,7 @@ points(clusters$centers, pch=4, cex=4, lwd=4)
 Step 2: Design your UI
 
 ```{r, echo=TRUE, eval=FALSE}
-ui <- fluidPage(responsive = FALSE,
+ui <- fluidPage(
   fluidRow(
     column(width=4, selectInput('xcol', 'X Variable', names(dataset))),
     column(width=4, selectInput('ycol', 'Y Variable', names(dataset),
@@ -321,27 +321,8 @@ shinyApp(ui=ui, server=server)
 
 
 
-## R Resources
+## Questions?
 
-#### Books
-* The Art of R Programming: http://nostarch.com/artofr.htm
-* An Introduction to R:
-http://cran.r-project.org/doc/manuals/R-intro.pdf
-* The R Inferno:
-http://www.burns-stat.com/pages/Tutor/R_inferno.pdf
+This presentation is available at [github.com/wrathematics/2015SFSURworkshop](https://github.com/wrathematics/2015SFSURworkshop)
 
-#### Comparisons to Other Languages
-* aRrgh: a newcomer’s (angry) guide to R: http://tim-smith.us/arrgh/
-* Mathesaurus: http://mathesaurus.sourceforge.net/
-* R programming for those coming from other languages: http://www.johndcook.com/R_language_for_programmers.html
-
-
-
-## Thanks for Coming!
-
-This presentation is available at [https://github.com/wrathematics/scshiny](github.com/wrathematics/sc14)
-
-Be sure to come to the R BoF tonight!
-
-* 5:30-7:00pm
-* Room 388-89-90
+Exercises are also available there.
