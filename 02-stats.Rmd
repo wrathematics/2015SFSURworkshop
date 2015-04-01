@@ -1,5 +1,5 @@
 ---
-title: "Introduction to R"
+title: "R Basics"
 author: "Drew Schmidt"
 date: "April 2, 2015"
 output:
@@ -15,6 +15,70 @@ output:
 ## Contents
 
 
+
+
+# Getting Started
+
+## 
+```{r, error=TRUE}
+2+2
+a <- 2+2
+a
+A
+```
+
+##
+```{r}
+c(1, 2, 3, 4, 5)
+1:5
+```
+
+## 
+```{r}
+x <- 1:100
+sum(x)
+mean(x)
+sd(x)
+summary(x)
+```
+
+## Inspecting Objects
+```{r}
+head(x)
+tail(x)
+str(x)
+```
+
+## Vectorization
+```{r}
+head(x+10)
+head(x*x)
+```
+
+## Getting Help
+```{r}
+?mean
+example(mean)
+?clustering
+??clustering
+```
+
+## File Paths and Data Input
+```r
+setwd("/home/user/")
+setwd("C:/Documents and Settings/user")
+
+mydata <- read.csv("mydata.csv")
+summary(mydata)
+```
+
+## Addon Packages
+```r
+install.packages("devtools")
+library(devtools)
+
+devtools::install_github("wrathematics/Rdym")
+```
 
 
 ## Questions?
