@@ -1,5 +1,5 @@
 ---
-title: 'TODO'
+title: 'Introduction to R'
 author: "Drew Schmidt"
 date: "04/2/2015"
 output: html_document
