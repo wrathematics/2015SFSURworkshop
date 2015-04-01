@@ -102,79 +102,177 @@ Geoms?  Aesthetics?  Facets?
 
 ## Customization Nearly Unlimited
 
-![anatomy](./pics/ggplot2/ggplot2-anatomy-all-annotated.pdf)
-
-
-## ggplot2
-
-* Package by Hadley Wickham (2005)
-* Implementation of Lee Wilkinson's Grammar of Graphics.
-* Highly abstract.
-* Powerful dsl for plotting data.
+![anatomy](./pics/ggplot2/ggplot2-anatomy-all-annotated.png)
 
 
 
+## Geom/Stat Functions
 
 
+```{r, eval=TRUE, echo=FALSE, results='asis'}
+formatter <- function(obj)
+{
+  i <- 1
+  for (nm in obj)
+  {
+    cat(nm, " ")
+    if (i == 4)
+    {
+      i <- 1
+      cat("\n")
+    }
+  }
+}
+obj <- objects(getNamespace("ggplot2"))
 
-# How It Works Internally
+geoms <- obj[grep(obj, pattern="^geom_")]
+formatter(geoms)
+cat("\n\n")
+stats <- obj[grep(obj, pattern="^stat_")]
+formatter(stats)
+```
 
-## Creating the Plot
-
-1. Construct
-2. Build
-3. Render
-4. Draw
-
-
-## Construct
-
-* Expression is 
-* Forces evaluation of formal ggplot2 command.
-
-
-## Build
-
-* All the "big decisions" are made and stored.
-* Sets up scales, ranges, ... .
-
-
-## Render
-
-* Transforms data from build phase into a compact table.
-* Collection of graphical objects (grobs).
-    * Layout (rectangular, polar, ...)
-    * Labels (x/y-axis, plot title, ...)
-    * Axes
+For explanations and examples other than those provided here, see
+the ggplot2 reference manual http://had.co.nz/ggplot2/
 
 
-## Draw
+## Layering
 
-* Uses grid graphics to produce the plot.
-
-
-## All Together
+Adding layers is not necessarily commutative!
 
 ```r
-force(x)                     # Construct
-data <- ggplot_build(x)      # Build
-grob <- ggplot_gtable(data)  # Render
-grid.draw(grob)              # Draw
+g + geom_point() + geom_line()
+
+g + geom_line() + geom_point()
+```
+
+```{r, message=FALSE, echo=FALSE, fig.width=10, fig.height=4}
+library(png)
+library(grid)
+img <- readPNG("./pics/ggplot2/layereg.png")
+grid.raster(img)
 ```
 
 
-# Example
 
+# Using ggplot2
 
-## A Simple Scatterplot
-
+## The Diamonds Dataset
 ```{r, echo=TRUE, eval=TRUE}
-df <- data.frame(x=1:3, y=c(1.1, 2.1, 3.2))
-df
+library(ggplot2)
+
+data(diamonds)
+head(diamonds)
+nrow(diamonds)
+```
+
+## 
+```{r}
+summary(diamonds)
+```
+
+## Barplot
+```{r}
+ggplot(data=diamonds, aes(x=clarity) ) + geom_bar()
+```
+
+## Barplot
+```{r}
+ggplot(data=diamonds, aes(x=clarity, fill=color) ) + geom_bar()
+```
+
+## Pie Chart
+```{r}
+ggplot(data=diamonds, aes(x=factor(1), fill=color) ) + 
+  geom_bar(width=1) +
+  coord_polar(theta="y")
+```
+
+## Histogram
+```{r}
+ggplot(data=diamonds, aes(x=price) ) + geom_histogram()
+```
+
+## Scatterplots
+```{r}
+g <- ggplot(data=diamonds, aes(x=clarity, y=carat) )
+g + geom_point()
+```
+
+## Scatterplot with jitter
+```{r}
+g + geom_jitter()
+```
+
+## Boxplot
+```{r}
+g + geom_boxplot()
 ```
 
 
 
+# Advanced Features and Tweaks
+
+## Faceting
+```{r}
+g <- ggplot(data=diamonds, aes(x=carat, y=price) ) + geom_point(aes(color=cut))
+g
+```
+
+## Faceting
+```{r}
+g + facet_wrap(~ cut)
+```
+
+## Faceting
+```{r}
+g + facet_grid(~ cut)
+```
+
+## Options
+```{r}
+g + xlab("Carat") + ylab("Price") + ggtitle("Carat by Price") + 
+  labs(color="Cut") + theme_bw()
+```
+
+## Saving Plots
+
+```r
+pdf("path/to/outfile.pdf")
+myplot # or last_plot()
+dev.off()
+```
+
+```r
+ggsave("path/to/outfile.pdf", myplot)
+```
+
+See also:
+
+```r
+?pdf
+?ggsave
+```
+
+
+## Faceting
 
 
 
+
+# Wrapup
+
+## Where to Learn More
+
+* Reference Manual http://had.co.nz/ggplot2/
+* CRAN page http://cran.r-project.org/web/packages/ggplot2/index.html
+* Google Group https://groups.google.com/group/ggplot2
+* `[ggplot2]` tag on stackoverflow
+* Official Book http://ggplot2.org/book/ (available in print)
+
+
+## Questions?
+
+This presentation is available at [github.com/wrathematics/2015SFSURworkshop](https://github.com/wrathematics/2015SFSURworkshop)
+
+Exercises are also available there.
