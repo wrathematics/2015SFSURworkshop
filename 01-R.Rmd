@@ -14,22 +14,23 @@ output:
 
 ## Contents
 
+* What is R?
+* R Extensions
+* R Interfaces
+* R Resources
 
 
 # What is R?
 
 ## What is R?
 
-* A powerful, free, open source language and package for graphics and data analysis 
-* An implementation of the S language
-* Written by Ross Ihaka & Robert Gentleman
-* SAS/SPSS have <15 add-ons, R has over 5,200!
-* #1 language for developing new data analysis and graphical methods
+* Powerful, free, open source.
+* Part programming language, part data analysis package.
+* An implementation of the S language.
+* Written by Ross Ihaka & Robert Gentleman.
+* SAS/SPSS have <15 add-ons, R has over 6400!
+* Most popular environment for developing new analysis and vis methods.
 
-
-
-
-# The R Way
 
 ## The SAS/SPSS Way
 
@@ -42,12 +43,49 @@ output:
 
 ## The R Way
 
+All of these concepts are built into the (single) core language.
+
+
+## Comparing R to Other Tools
+
+* R can be harder to "get going" than other analysis tools.
+* But once you do...
+* Hastily becoming the "lingua franca".
 
 
 
+# R Extensions
 
-# R and R Extensions
+## Extensions
 
+* Community and commercial addons.
+* Everything from sophisticated analyses to making your computer beep.
+* Written in R, Fortran, C, C++ mostly.
+* Performance can sometimes be an issue, but generally accurate.
+* Package download trends:  https://dgrtwo.shinyapps.io/cranview/
+
+## The CRAN
+
+* Comprehensive R Archive Network.
+* Open source only.
+* Over 6400 packages.
+* High standard of quality is vigorously enforced.
+* Closest thing to a journal for stats software.
+
+```r
+install.packages("NameOfPackage")
+```
+
+## GitHub
+
+* Many authors eschewing CRAN for GitHub.
+* Faster bug fixes, faster bugs (maybe).
+
+```r
+install.packages("devtools")
+library(devtools)
+install_github("GitHubUserName/RepositoryName")
+```
 
 
 # R Interfaces
@@ -62,6 +100,21 @@ output:
 6. Shiny
 
 
+## RStudio
+![RCmdr](./pics/rstudio.png)
+
+## R Commander
+![RCmdr](./pics/rcmdr.png)
+
+## Deducer
+![RCmdr](./pics/deducer.png)
+
+## Rattle
+![RCmdr](./pics/rattle.png)
+
+## R from Excel
+http://rcom.univie.ac.at/download.html
+![RCmdr](./pics/Rexcel.png)
 
 ## Shiny
 
@@ -87,19 +140,26 @@ output:
 
 
 
-## R Resources
+# R Resources
 
-#### Books
+## Books
 * *The Art of R Programming*, Norm Matloff
 * *R for SAS and SPSS Users*, Muenchen
 * *R for Stata Users*, Muenchen & Hilbe
 * [*An Introduction to R*](http://cran.r-project.org/doc/manuals/R-intro.pdf)
 * [*The R Inferno*](http://www.burns-stat.com/pages/Tutor/R_inferno.pdf)
 
-#### Comparisons to Other Languages
+## Comparisons to Other Languages
 * [aRrgh: a newcomer’s (angry) guide to R](http://tim-smith.us/arrgh/)
 * [Mathesaurus](http://mathesaurus.sourceforge.net/)
 * [R programming for those coming from other languages](http://www.johndcook.com/R_language_for_programmers.html)
+
+
+## Online Help
+
+* `[r]` tag on stackoverflow
+* The mailing lists (r-help)
+* `#rstats` on twitter
 
 
 
