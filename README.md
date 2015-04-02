@@ -5,13 +5,18 @@
 
 Slides: 
 
+* Introduction to R           [[html](http://htmlpreview.github.com/?https://github.com/wrathematics/2015SFSURworkshop/blob/master/01-R.html)
+* Statistics the R Way        [[html](http://htmlpreview.github.com/?https://github.com/wrathematics/2015SFSURworkshop/blob/master/02-stats.html)
+* Plotting with ggplot2       [[html](http://htmlpreview.github.com/?https://github.com/wrathematics/2015SFSURworkshop/blob/master/03-ggplot2.html)
+* Interactive Vis with Shiny  [[html](http://htmlpreview.github.com/?https://github.com/wrathematics/2015SFSURworkshop/blob/master/04-shiny.html)
+
 
 Slide Handouts: 
 
-* Introduction to R           [[html](http://htmlpreview.github.com/?https://github.com/wrathematics/2015SFSURworkshop/blob/master/01-R.html)       | [pdf](https://github.com/wrathematics/2015hpcRworkshop/blob/master/01-R.pdf?raw=true)] 
-* Statistics the R Way        [[html](http://htmlpreview.github.com/?https://github.com/wrathematics/2015SFSURworkshop/blob/master/02-stats.html)   | [pdf](https://github.com/wrathematics/2015hpcRworkshop/blob/master/02-stats.pdf?raw=true)] 
-* Plotting with ggplot2       [[html](http://htmlpreview.github.com/?https://github.com/wrathematics/2015SFSURworkshop/blob/master/03-ggplot2.html) | [pdf](https://github.com/wrathematics/2015hpcRworkshop/blob/master/03-ggplot2.pdf?raw=true)]
-* Interactive Vis with Shiny  [[html](http://htmlpreview.github.com/?https://github.com/wrathematics/2015SFSURworkshop/blob/master/04-shiny.html)   | [pdf](https://github.com/wrathematics/2015hpcRworkshop/blob/master/04-shiny.pdf?raw=true)]
+* Introduction to R           [[html](http://htmlpreview.github.com/?https://github.com/wrathematics/2015SFSURworkshop/blob/master/01-R_handout.html)       | [pdf](https://github.com/wrathematics/2015hpcRworkshop/blob/master/01-R_handout.pdf?raw=true)] 
+* Statistics the R Way        [[html](http://htmlpreview.github.com/?https://github.com/wrathematics/2015SFSURworkshop/blob/master/02-stats_handout.html)   | [pdf](https://github.com/wrathematics/2015hpcRworkshop/blob/master/02-stats_handout.pdf?raw=true)] 
+* Plotting with ggplot2       [[html](http://htmlpreview.github.com/?https://github.com/wrathematics/2015SFSURworkshop/blob/master/03-ggplot2_handout.html) | [pdf](https://github.com/wrathematics/2015hpcRworkshop/blob/master/03-ggplot2_handout.pdf?raw=true)]
+* Interactive Vis with Shiny  [[html](http://htmlpreview.github.com/?https://github.com/wrathematics/2015SFSURworkshop/blob/master/04-shiny_handout.html)   | [pdf](https://github.com/wrathematics/2015hpcRworkshop/blob/master/04-shiny_handout.pdf?raw=true)]
 
 
 Exercises:
