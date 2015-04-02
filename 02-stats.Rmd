@@ -14,7 +14,9 @@ output:
 
 ## Contents
 
-
+* Getting Started
+* Data Structures
+* Functions
 
 
 # Getting Started

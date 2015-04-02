@@ -14,6 +14,12 @@ output:
 
 ## Contents
 
+* Plotting Data in R
+* Introduction to ggplot2
+* Deconstructing a ggplot2 Plot
+* Using ggplot2
+* Advanced Features and Tweaks
+* Wrapup
 
 
 # Plotting Data in R
