@@ -1,5 +1,5 @@
 ---
-title: "Rapid Web Portal Creation with R and Shiny"
+title: "Introduction to Shiny"
 author: "Drew Schmidt"
 date: "April 2, 2015"
 output:
@@ -22,18 +22,13 @@ runtime: shiny
 
 # What is Shiny?
 
-
 ## US Demographics by County
-
 ```{r, echo=FALSE, eval=TRUE}
 source("./shiny_examples/census.r")
 shinyApp(ui=ui, server=server)
 ```
 
-
-
 ## US Demographics by County: UI Code
-
 ```{r, echo=TRUE, eval=FALSE}
 fluidPage(
   titlePanel("2010 US Census"),
@@ -54,15 +49,11 @@ fluidPage(
 )
 ```
 
-
-
 ## Performance of the Top 500 Supercomputers
-
 ```{r, echo=FALSE, eval=TRUE}
 source("./shiny_examples/RTop500.r")
 shinyApp(ui=ui, server=server)
 ```
-
 
 
 ## What is Shiny?
