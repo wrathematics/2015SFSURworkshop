@@ -72,6 +72,17 @@ mydata <- read.csv("mydata.csv")
 summary(mydata)
 ```
 
+## Writing Data
+```r
+write.csv(mydata, file="mydata.csv")
+
+saveRDS(object=mydata, file="mydata.rds")
+
+### load rds via load()
+load("mydata.rds")
+mydata
+```
+
 ## Addon Packages
 ```r
 install.packages("devtools")
@@ -79,6 +90,80 @@ library(devtools)
 
 devtools::install_github("wrathematics/Rdym")
 ```
+
+## Missingness
+```r
+NA
+NA + 1
+is.na(NA)
+```
+
+
+# Data Structures
+
+* Vectors
+* Factors
+* Matrices
+* Dataframes
+* Some other things not worth getting into right now...
+
+## Vectors
+```{r}
+c(1, 2, 3, 4, 5)
+5:1
+vec <- 1:5
+vec[3] <- NA
+vec
+```
+
+## Factors
+```{r}
+charvec <- c("a", "b", "a", "c", "a", "b", "b")
+charvec
+fac <- as.factor(charvec)
+fac
+```
+
+## Matrices
+```{r}
+mat <- matrix(rnorm(21), nrow=7, ncol=3)
+cov(mat)
+```
+
+## Dataframes
+```{r}
+data.frame(x=mat, charvec=charvec, fac=fac)
+```
+
+
+# Functions
+
+* R is a (mostly) *functional* language.
+* No macros, only functions.
+* Powerful abstraction.
+
+## Interacting with functions
+```{r}
+vec
+median(vec)
+median(na.rm=TRUE, vec)
+median(vec, TRUE)
+```
+
+## Creating Functions
+```{r}
+vec
+
+first_number_of_vec <- function(vec) vec[1]
+first_number_of_vec(vec)
+
+sum_of_first_and_last <- function(vec){
+  sum <- vec[1] + vec[length(vec)]
+  return(sum)
+}
+sum_of_first_and_last(vec)
+```
+
 
 
 ## Questions?
